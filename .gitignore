@@ -1,0 +1,7 @@
+# Jekyll default
+_site
+.sass-cache
+.jekyll-metadata
+
+# Vim swap files
+.*.sw?
