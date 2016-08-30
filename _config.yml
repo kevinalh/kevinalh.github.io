@@ -16,10 +16,13 @@
 title: Uncountable Choice
 description: Personal blog. Topics include mathematics, programming, music and others.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
+url: "https://kevinalh.github.io" # the base hostname & protocol for your site
 twitter_username: kevinalh
 github_username:  kevinalh
 
 # Build settings
 markdown: kramdown
 theme: minima
+
+gems:
+    - jekyll-seo-tag
