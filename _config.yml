@@ -20,6 +20,9 @@ url: "https://kevinalh.github.io" # the base hostname & protocol for your site
 twitter_username: kevinalh
 github_username:  kevinalh
 
+# Google analytics
+google_analytics: UA-74357109-2
+
 # Build settings
 markdown: kramdown
 theme: minima
