@@ -2,8 +2,10 @@
 layout: post
 title: "Trying out Jekyll"
 date: "2016-08-30 11:17:28 -0500"
-categories: meta
+categories:
+  - meta
 tags: jekyll
+lang: en
 ---
 I've tried to create a blog a few times, but I just didn't like the things I've tried so far. That is, Wordpress and Blogspot (for a math and art-related blog, respectively).
 
@@ -15,7 +17,7 @@ Why Jekyll?
 ---
 Actually there's no good reason other than it's the obvious choice. Since Github offers so much [integration with Jekyll](https://help.github.com/articles/about-github-pages-and-jekyll/), chances are I won't have to fight against the system with hacks and stuff. Of course, Jekyll is not the most flexible thing ever, but by the time I need special functionality, I guess it's time to evaluate other options. Meanwhile, Jekyll is just right.
 
-There are other static site generators that look very nice, like [Middleman](https://middlemanapp.com/) or [Pelican](http://blog.getpelican.com/) (which works with Python!). Actually, there are a lot of them, and selecting one is very hard. This is the typical [Overchoice](https://en.wikipedia.org/wiki/Overchoice) scenario, isn't it? Actually the same scenario is present in many other areas of web development, but that's a topic for another post.
+There are other static site generators that look very nice, like [Middleman](https://middlemanapp.com/) or [Pelican](http://blog.getpelican.com/) (which works with Python!). Actually, there are a lot of them, and selecting one is very hard. This is the typical [Overchoice](https://en.wikipedia.org/wiki/Overchoice) scenario, isn't it? Actually the same problem is present in many other areas of web development, but that's a topic for another post.
 
 My initial toolchain
 ---
