@@ -3,7 +3,7 @@ layout: post
 title: "Closure and interior of a set"
 date: "2016-09-04 19:40:20 -0500"
 categories:
-  - class notes
+  - classnotes
   - topology
 tags:
   - topology
@@ -27,7 +27,7 @@ $$ \bigcap \{ F \subset X : F \text{ is closed and } A \subset F \} $$
 Similarly, the **interior**, denoted $$A^o$$ or $$int(A)$$ is the biggest open set contained in A, or:
 $$ \bigcup \{ F \subset X: F \text{ is open and } F \subset A \} $$
 
-These definitions have some very useful equivalences, some of which are given as the definition in Analysis courses due to their geometric appeal.
+These definitions have some very useful equivalences, some of which are given as the definition in Analysis courses due to their geometric appeal. We'll talk about them later. First, here are some properties.
 
 Properties
 ===
@@ -40,6 +40,10 @@ For all $$A, B \subset X$$, it follows that:
 5. Given a family $$(A_\alpha) \subset X$$, we get: $$\bigcup \overline{A}_\alpha \subset \overline{\bigcup A_\alpha} $$
 6. \$$\overline{A \cap B} \subset \overline{A} \cap \overline{B}$$
 
-Alternative closure definition
-===
-$$\overline{A} = \{ x\in X : x \in U \in \tau \Rightarrow U \cup A \neq \varnothing \}$$
+Let's now define special points that will characterize sets and give more geometric intuition. Let $$A \subset X$$ and take a point $$x \in X$$. We'll categorize it according to the behavior of $$A$$ or its complement with the neighborhoods of $$x$$.
+
+It is an **accumulation or adherence point** if $$x \in U \in \tau \Rightarrow U \cap A \neq \varnothing$$.
+
+It is a **limit point** if $$x \in U \in \tau \Rightarrow U \cap (A \setminus \{x\}) \neq \varnothing$$.
+
+It is a **boundary point** if $$x \in U \in \tau \Rightarrow U \cap A \neq \varnothing \text{ and } U \cap (X \setminus A) \neq \varnothing$$.
