@@ -24,7 +24,7 @@ A **topological space** is a tuple $$(X, \tau)$$, where $$\tau$$ is a topology o
 The **closure** of a set $$A \subset X $$, denoted $$\bar{A}$$ or $$cl(A)$$, is the smallest closed set that contains $$A$$, that is:
 $$ \bigcap \{ F \subset X : F \text{ is closed and } A \subset F \} $$
 
-Similarly, the **interior**, denoted $$A^o$$ or $$int(A)$$ is the biggest open set contained in A, or:
+Similarly, the **interior**, denoted $$\mathring{A}$$ or $$int(A)$$ is the biggest open set contained in A, or:
 $$ \bigcup \{ F \subset X: F \text{ is open and } F \subset A \} $$
 
 These definitions have some very useful equivalences, some of which are given as the definition in Analysis courses due to their geometric appeal. We'll talk about them later. First, here are some properties.
@@ -47,3 +47,35 @@ It is an **accumulation or adherence point** if $$x \in U \in \tau \Rightarrow U
 It is a **limit point** if $$x \in U \in \tau \Rightarrow U \cap (A \setminus \{x\}) \neq \varnothing$$.
 
 It is a **boundary point** if $$x \in U \in \tau \Rightarrow U \cap A \neq \varnothing \text{ and } U \cap (X \setminus A) \neq \varnothing$$.
+
+It is an **interior point** if $$\exists U \subset X$$ neighborhood of $$x$$ such that $$U \subset A$$.
+
+To define a topology, we usually just specify some special elements that will generate the rest of it. It's analogous to generating a vector space from a basis.
+
+A **basis** of a topology is a subset $$\mathbb{B} \subset \tau$$ such that $$\forall A \in \tau \exists B_1, B_2 : A = B_1 \cup B_2$$. That is, every element of the topology can be expressed as the union of elements of the basis.
+
+It can be checked that being the basis of a topology is equivalent to having the following properties:
+
+1. \$$\forall x \in X, \exists B \in \mathbb{B}: x\in B$$
+2. \$$\forall x\in X, x \in B_1 \cap B_2 \Rightarrow \exists B_3 \subset B_1 \cap B_2 : x \in B_3$$
+
+**Theorem:** Let $$\mathbb{A}, \mathbb{B}$$ be two bases for topologies $$\tau_1, \tau_2$$, respectively. Then $$\tau_1 = \tau_2$$ if and only if:
+
+1. \$$x \in A \in \mathbb{A} \Rightarrow \exists B \in \mathbb{B} : x \in B \subset A$$
+2. \$$x \in B \in \mathbb{B} \Rightarrow \exists A \in \mathbb{A} : x \in A \subset B$$
+
+The basis can be reduced even more through the use of a subbasis. A **subbasis** $$\mathcal{S}$$ for a topology $$\tau$$ is a collection of sets such that $$\mathbb{B}(\mathcal{S}) = \{ \bigcap_{i=1}^{n} S_n : S_n \in \mathcal{S} \}$$, that is, the set of all the finite intersections of sets in $$\mathcal{S}$$, is a basis for the topology $$\tau$$.
+
+**Theorem:** $$\mathcal{S}$$ is a subbasis for a topology on $$X$$ if and only if $$\bigcup_{S\in\mathcal{S}} S = X$$.
+
+One nice consequence of this theorem is that, for an arbitrary collection $$\mathcal{C} \subset 2^X$$, we can form the smallest topology that contains it, using the fact that $$\mathcal{C} \cup X$$ will always be a subbasis:
+
+$$\tau(\mathcal{C}) = \tau(\mathbb{B}(\mathcal{C} \cup \{X\}))$$
+
+Where in the last $$\tau$$ operator you're just taking all the unions.
+
+For a point $$p \in X$$, we define a **local basis** $$\mathbb{B}_p$$ to be a collection of neighborhoods of $$p$$ such that:
+
+$$\forall V \text{ open neighborhood of } p, \exists B \in \mathbb{B}_p : p\in B \subset V$$
+
+In the next post we'll see some results and definitions related to continuity and limits.
